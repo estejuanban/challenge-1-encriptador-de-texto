@@ -1,0 +1,483 @@
+ /*--------
+    Fuentes 
+    -----------*/
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    /*--------
+    Global Css
+    -----------*/
+
+    :root {
+        --boton: #083aee;
+        --Shadow1: rgba(0, 51, 255, 0.8);
+        --letraBotones: #111112;
+        --ShadowEncriptador: rgba(255, 255, 0, 0.8);
+        --contorno: rgba(150, 249, 1, 0.221);
+        --grey: #8b8585;
+        --white: #dadbd0;
+        --purple: #ba07f0;
+        --Gree: #495057;
+
+        /*--------
+    generales
+    -----------*/
+
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+
+    body {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+       background: url(/assets/fondo-escritorio-moderno-vector-diseno-azul-geometrico_53876-135923.avif);
+        background-size: cover;
+        background-attachment: fixed;
+
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /*--------
+    styles Encabezado
+    -----------*/
+    header {
+        position: absolute;
+        margin: 40px 0px 0px 40px;
+    }
+
+    header.logo {
+        display: flex;
+        align-items: flex-start;
+        width: 120px;
+        height: 48px;
+    }
+
+    .logo {
+        filter: drop-shadow(1px 1px 10px var(--purple));
+    }
+
+
+    /*--------
+    styles Cuerpo
+    -----------*/
+    main {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+    }
+
+    .Bloque-primario {
+        width: 60%;
+        margin: 168px 0px 0px 140px;
+        background: transparent;
+
+    }
+
+    .text-area-input {
+
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 48px;
+        outline: none;
+        border: 1px solid var(--grey);
+        color: var(--white);
+        /*text-transform: lowercase;*/
+        /*garantizar minúsculas */
+        background: none;
+        resize: none;
+        width: 100%;  
+        max-width: 700px; /* Adjust as needed */  
+        height: 280px;
+    }
+
+    .text-area-input::placeholder {
+        color: var(--white);
+    }
+
+    .aviso {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        gap: 8px;
+        position: absolute;
+        top: 500px;
+    }
+
+    .anotación {
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+        opacity: 0.8;
+        color: var(--white);
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
+        position: absolute;
+        top: 526px;
+    }
+
+    /* Estilo del botón Encriptar */
+    .encriptar {
+        position: relative;
+        height: 67px;
+        width: 328px;
+        padding: 19px;
+        background-color:var(--Gree);
+        border-radius: 14px;
+        box-shadow: 0 0 20px var(--purple);
+        transition: box-shadow 0.4s ease;
+        color: var(--letraBotones);
+        cursor: pointer;
+        border: none;
+        margin-right: 40px;
+        overflow: hidden; /* Asegura que el contenido no se salga del botón */
+    }
+
+    .encriptar::before {
+        content: "\1F512"; /* Unicode del candado cerrado */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px; /* Ajusta el tamaño del ícono */
+        color: var(--letraBotones);
+        transition: opacity 0.4s ease;
+        opacity: 1;
+    }
+
+    .encriptar::after {
+        content: "Encriptar";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: var(--letraBotones);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .encriptar:hover::before {
+        opacity: 0;
+    }
+
+    .encriptar:hover::after {
+        opacity: 1;
+    }
+
+    /* Estilo del botón Desencriptar */
+    .desencriptar {
+        position: relative;
+        height: 67px;
+        width: 328px;
+        padding: 19px;
+        background-color:var(--Gree);
+        border-radius: 14px;
+        box-shadow: 0 0 20px var(--purple);
+        transition: box-shadow 0.4s ease;
+        color: var(--letraBotones);
+        cursor: pointer;
+        border: none;
+        margin-right: 40px;
+        overflow: hidden; /* Asegura que el contenido no se salga del botón */
+    }
+
+    .desencriptar::before {
+        content: "\1F511"; /* Unicode de la llave */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px; /* Ajusta el tamaño del ícono */
+        color: var(--letraBotones);
+        transition: opacity 0.4s ease;
+        opacity: 1;
+    }
+
+    .desencriptar::after {
+        content: "Desencriptar";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: var(--letraBotones);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .desencriptar:hover::before {
+        opacity: 0;
+    }
+
+    .desencriptar:hover::after {
+        opacity: 1;
+    }
+
+    /* Efecto Hover General */
+    .encriptar:hover, .desencriptar:hover {
+        box-shadow: 0 0 10px var(--purple);
+    }
+
+
+    .Bloque-secundario {
+        width: 270px;
+        height: 580px;
+        background: var(--white);
+        box-shadow: 5px 15px 32px -8px var(--purple);
+        position: relative;
+        margin-top: 40px;
+        border-radius: 32px;
+        text-align: center;
+
+    }
+
+    .tarjeta-contenedor {
+        width: 250px;
+        margin: auto;
+        margin-top: 50%;
+        background: var(--white);
+    }
+
+    .img-muñeco {
+        background: var(--white);
+    }
+
+    .texto-uno {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: center;
+        color: var(--grey);
+        background: var(--white);
+    }
+
+    .texto-dos {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--grey);
+        background: var(--white);
+    }
+
+    .text-area-output {
+        width: 100%;
+        height: 485px;
+        position: absolute;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: var(--Gree);
+        background: transparent;
+        border-radius: 32px;
+        border: none;
+        resize: none;
+    }
+
+    .text-area-output:focus {
+        outline: none;
+    }
+
+
+    .copiar {
+        height: 67px;
+        width: 224px;
+        bottom: 0;
+        left: 0;
+        margin: 23px;
+        position: absolute;
+        font-size: 20px;
+        line-height: 19px;
+        text-align: center;
+        padding: 24px;
+        background-color: var(--boton);
+        border-radius: 14px;
+        box-shadow: 0 0 20px var(--Shadow1);
+        color: var(--letraBotones);
+        transition: box-shadow 0.4s ease;
+        cursor: pointer;
+        border: none;
+        visibility: hidden;
+        color: var(--white);
+        /*permite poner invisibles el botón */
+    }
+
+    .copiar:hover {
+        box-shadow: 0 0 10px #e9041b;
+    }
+
+    .encriptar:hover,
+    .desencriptar:hover,
+    .copiar:hover {
+        transform: scale(0.97);
+    }
+
+    /*--------
+    styles pie de pagina 
+    -----------*/
+    footer {
+        margin-top: auto;
+        padding: 10px;
+        text-align: center;
+        height: 1px;
+        font-size: 10px;
+        font-weight: 200;
+        color: var(--white);
+
+
+
+
+    }
+
+.github{
+    background: #dadbd0;
+    border-radius: 50%;
+}
+
+    .github:hover {
+        color: var(--white);
+        opacity: 0.6;
+    }
+
+    
+
+    /*Media*/
+
+    @media(max-width: 1250px) {
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .img-muñeco {
+            display: none;
+            /*ocultar imagen */
+        }
+
+        .Bloque-primario {
+            margin: 168px 0px 0px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .aviso {
+            position: inherit;
+            margin: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            position: inherit;
+
+        }
+
+        .Bloque-secundario{
+            width: 665px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+
+    .Bloque-primario:hover, .Bloque-secundario:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+        .tarjeta-contenedor{
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            position: absolute;
+            bottom: 20%;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .copiar{
+            position: inherit;
+            width: 100%;
+    }
+
+    .text-area-output{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+
+    }
+}
+
+@media(max-width: 720px) {
+
+    header.logo{
+        width: 100%;
+        background: transparent;
+        padding: 2px;
+    }
+
+    .Bloque-primario{
+        width: 90%;
+        font-size: 24px;
+    }
+    .buttons{
+        display:grid;
+        gap: 21px;
+        
+    }
+
+    .Bloque-secundario{
+        width: 90%;
+    }
+
+    .copyright{
+        font-size: 20px;
+    }
+
+    .encriptar {
+        width: 300px;
+        margin-left: 50px;
+    }
+    .desencriptar{
+        width: 300px;
+        margin-left: 50px;
+    }
+    
+
+
+
+    }

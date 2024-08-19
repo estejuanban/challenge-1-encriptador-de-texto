@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logopage.jpg">
+
+</head>
+
+
+<body>
+    <!--ENCABEZADO -->
+
+    <header class="inicio">
+        <a href="#" rel="">
+            <img src="assets/Logo.png" alt="Logo de Alura" class="logo">
+        </a>
+    </header>
+
+    <!--CUERPO -->
+    <main class="encriptador-de-texto">
+
+        <section class="Bloque-primario">
+            <textarea class="text-area-input" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+            <div class="aviso">
+                <img src="/assets/aviso.svg" alt="Imagen Aviso" class="img-aviso">
+                <p class="anotación"> Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="buttons">
+                <button id="encriptar" class="encriptar" onclick="openDialog('e')"></button>
+                <button id="desencriptar" class="desencriptar" onclick="openDialog('d')"></button>
+            </div>
+        </section>
+
+        <section class="Bloque-secundario">
+
+            <div class="tarjeta-contenedor">
+                <img src="/assets/Muñeco.png" alt="Imagen muñeco" class="img-muñeco">
+                <p class="texto-uno">Ningún mensaje fue encontrado</p>
+                <p class="texto-dos">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <textarea class="text-area-output" cols="30" rows="10" placeholder=""></textarea>
+            
+            <button onclick="copyToClipboard()" class="copiar"> Copiar</button>
+
+        </section>
+
+    </main>
+
+    <!--PIE-->
+    <footer>
+        <div>
+        <p class="copyright">&copy; copyright 2024 - Encriptador de Texto - desarrollado por EsteJuanban</p>
+        <a href="#" rel="">
+            <img src="/assets/github.svg" alt="Logo github" class="github">
+        </a>
+    </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
