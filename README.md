@@ -1,5 +1,4 @@
 <h1 align="center">ENCRIPTADOR DE TEXTO </h1>
-<h2>Indice</h2>
 <h2>Descripción del proyecto</h2>
    <p align="left">
    <img src="https://img.shields.io/badge/STATUS-%20FINALIZADO-green">
@@ -42,10 +41,16 @@
 - `Funcionalidad 3`: Codigo en CSS paratrasiciones en botones y sobre posicion de imagen a texto en un Hover 
 
 
-\## 📁 Acceso al proyecto
+📁 Acceso al proyecto
 
-**Indica cómo se puede descargar o acceder al código fuente del proyecto, ya sea proyecto inicial o final**
+"""
+Puedes ingresar al proyecto a través de la URL https://github.com/estejuanban/challenge-1-encriptador-de-texto.git
+"""
 
-\## 🛠️ Abre y ejecuta el proyecto
+🛠️ Tecnologías utilizadas
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVA</li>
+</ul>
 
-**Muestra las instrucciones necesarias para abrir y ejecutar el proyecto**
